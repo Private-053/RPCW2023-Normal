@@ -36,6 +36,7 @@ router.get('/contracts/:id', function(req, res, next) {
 });
 
 router.get('/contracts', function(req, res, next) {
+  var data = new Date().toISOString().substring(0, 16)
   year = req.query.year
   inst = req.query.inst
   if (year != undefined) {
